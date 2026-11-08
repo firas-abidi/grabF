@@ -1,0 +1,1374 @@
+# Sites grabF can download from
+
+Generated from the engines grabF uses: **yt-dlp 2026.10.26** for video and audio, **gallery-dl 1.32.19** for photos, carousels and galleries. Sites change their pages all the time, so a site on this list can break until the engines catch up - press **update** in grabF when that happens.
+
+- **1182** video/audio sites (plus 106 currently marked broken in yt-dlp)
+- **136** photo/gallery sites
+- Anything not listed here may still work: grabF also tries a site's plain page for an embedded video.
+
+grabF refuses adult content (anything marked 18+) and a set of sites that host leaked paid content, pirated material or unofficial scans. Those are not listed here, and the app won't download from them.
+
+## The popular ones
+
+| Site | What you can get | Video engine | Photo engine | Checked |
+|---|---|:-:|:-:|:-:|
+| YouTube | videos, shorts, music, playlists, channels | ✓ | – | ✓ |
+| TikTok | videos, sounds; photo slideshows | ✓ | ✓ | ✓ |
+| Instagram | reels and videos without login; photos and carousels need a login | ✓ | ✓ | ✓ |
+| X / Twitter | videos and GIFs; photos need a login | ✓ | ✓ |  |
+| Facebook | public videos and reels | ✓ | ✓ | ✓ |
+| Pinterest | video pins and image pins | ✓ | ✓ | ✓ |
+| Reddit | videos and galleries (Reddit now usually wants a login) | ✓ | ✓ |  |
+| Bluesky | videos and photos | ✓ | ✓ | ✓ |
+| Threads | not supported by either engine | – | – |  |
+| Snapchat | Spotlight videos (currently broken in the engine) | ✓ | – |  |
+| Twitch | clips and past broadcasts | ✓ | – |  |
+| Vimeo | videos (some need a login) | ✓ | – |  |
+| SoundCloud | tracks, sets, likes | ✓ | – | ✓ |
+| Bandcamp | tracks and albums | ✓ | – |  |
+| Dailymotion | videos and playlists | ✓ | – | ✓ |
+| LinkedIn | public post videos | ✓ | – | ✓ |
+| Tumblr | videos and photos | ✓ | ✓ |  |
+| Imgur | videos, GIFs and albums | ✓ | ✓ | ✓ |
+| 9GAG | videos and images | ✓ | – | ✓ |
+| Bilibili | videos | ✓ | – |  |
+| Kick | clips and VODs | ✓ | – |  |
+| Rumble | videos | ✓ | – |  |
+| VK | videos and photos | ✓ | ✓ |  |
+| Flickr | photos and videos | ✓ | ✓ |  |
+| DeviantArt | art and galleries | – | ✓ |  |
+| ArtStation | artwork | – | ✓ |  |
+
+**Checked** = grabF read a real public post from that site during development (YouTube and Bluesky were also downloaded end to end). Unchecked rows are supported by the engines but weren't tried here. Login notes: Chrome, Edge and Brave lock their logins, so login-only posts need Firefox (see the app's 'signed in with').
+
+## Video and audio (1182 sites)
+
+Name as yt-dlp knows it, with its description where it has one.
+
+- 10play
+- 17live
+- 1News - 1news.co.nz article videos
+- 1tv - Первый канал
+- 23video
+- 24tv.ua
+- 3qsdn - 3Q SDN
+- 3sat
+- 56.com
+- 7plus
+- 9c9media
+- 9gag
+- 9News
+- 9now.com.au
+- abc.net.au
+- abcnews
+- abcotvs - ABC Owned Television Stations
+- AbemaTV
+- AbemaTVTitle
+- AcademicEarth
+- acast
+- AcFunBangumi
+- AcFunVideo
+- ADN - Animation Digital Network
+- ADNSeason - Animation Digital Network
+- adobetv
+- AdultSwim
+- aenetworks - A+E Networks: A&E, Lifetime, History.com, FYI Network and History Vault
+- AeonCo
+- agalega
+- AitubeKZVideo
+- Alibaba
+- AliExpressLive
+- AlJazeera
+- Allocine
+- Allstar
+- AllstarProfile
+- altcensored
+- Alura
+- AluraCourse
+- AmadeusTV
+- Amara
+- AmazonMiniTV - Amazon MiniTV Season, "minitv:season:" prefix
+- AmazonReviews
+- AmazonStore
+- AMCNetworks
+- AmericasTestKitchen
+- AmericasTestKitchenSeason
+- AmHistoryChannel
+- anderetijden - npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl
+- Angel
+- AnimalPlanet
+- ant1newsgr - ant1news.gr articles
+- antenna - antenna.gr and ant1news.gr videos
+- Anvato
+- APA
+- Aparat
+- apple - Apple Music Connect
+- archive.org - archive.org video and audio
+- ArcPublishing
+- ARDAudiothek
+- ARDAudiothekPlaylist
+- ARDMediathek
+- ARDMediathekCollection
+- Art19
+- Art19Show
+- arte.sky.it
+- ArteTV
+- ArteTVCategory
+- ArteTVEmbed
+- ArteTVPlaylist
+- asobichannel - ASOBI CHANNEL
+- AsobiStage - ASOBISTAGE (アソビステージ)
+- AtresPlayer
+- AtScaleConfEvent
+- AudiMedia
+- AudioBoom
+- Audiodraft
+- audiomack
+- Audius - Audius.co
+- AZMedien - AZ Medien videos
+- BaiduVideo - 百度视频
+- BanBye
+- BanByeChannel
+- Bandcamp
+- Bandlab
+- BandlabPlaylist
+- BannedVideo
+- bbc
+- bbc.co.uk - BBC articles
+- BBVTV
+- BBVTVLive
+- BBVTVRecordings
+- BeaconTv
+- Beatport
+- BerufeTV
+- Bet
+- bfmtv
+- bibeltv - BibelTV live program
+- Bigo
+- Bild - Bild.de
+- BiliBili
+- Bilibili category extractor
+- BilibiliAudio
+- BilibiliAudioAlbum
+- BiliBiliBangumi
+- BiliBiliBangumiMedia
+- BiliBiliBangumiSeason
+- BilibiliCheese
+- BilibiliCheeseSeason
+- BilibiliCollectionList
+- BiliBiliDynamic
+- BilibiliFavoritesList
+- BiliBiliPlayer
+- BilibiliPlaylist
+- BiliBiliSearch - Bilibili video search
+- BilibiliSeriesList
+- BilibiliSpaceAudio
+- BilibiliSpaceVideo
+- BilibiliWatchlater
+- BiliIntl
+- BiliLive
+- BioBioChileTV
+- Biography
+- BitChute
+- BitChuteChannel
+- Bitmovin
+- BlackboardCollaborate
+- BlackboardCollaborateLaunch
+- blerp
+- blogger.com
+- Bloomberg
+- Bluesky
+- Boosty
+- BostonGlobe
+- Box
+- BoxCastVideo
+- Bpb - Bundeszentrale für politische Bildung
+- BrainPOP
+- BrainPOPELL
+- BrainPOPEsp - BrainPOP Español
+- BrainPOPFr - BrainPOP Français
+- BrainPOPIl - BrainPOP Hebrew
+- BrainPOPJr
+- BravoTV
+- BreitBart
+- brightcove
+- Brilliantpala - VoD on classes.brilliantpala.org
+- bt - Bergens Tidende Articles
+- BTVPlus
+- Bundesliga
+- Bundestag
+- BunnyCdn
+- BusinessInsider
+- BuzzFeed
+- Caltrans
+- CamFMEpisode
+- CamFMShow
+- CamModels
+- CamtasiaEmbed
+- Canal1
+- CanalAlpha
+- canalc2.tv
+- Canalplus - mycanal.fr and piwiplus.fr
+- Canalsurmas
+- CaracolTvPlay
+- cbc.ca
+- CBSLocal
+- CBSLocalArticle
+- CBSLocalLive
+- cbsnews - CBS News
+- CCMA - 3Cat, TV3 and Catalunya Ràdio
+- CCTV - 央视网
+- CDA
+- CDAFolder
+- Cellebrite
+- CeskaTelevize
+- CGTN
+- CharlieRose
+- Chilloutzone
+- chzzk
+- cielotv.it
+- CinetecaMilano
+- Cineverse
+- CineverseDetails
+- CiscoLiveSearch
+- CiscoLiveSession
+- ciscowebex - Cisco Webex
+- CJSW
+- Clipchamp
+- CloudflareStream
+- CloudyCDN
+- Clyp
+- CNBCVideo
+- CNN
+- CNNIndonesia
+- ComedyCentral
+- CondeNast - Condé Nast media group: Allure, Architectural Digest, Ars Technica, Bon Appétit, Brides, Condé Nast, Condé Nast Traveler, Details, Epicurious, GQ, Glamour, Golf Digest, SELF, Teen Vogue, The New Yorker, Vanity Fair, Vogue, W Magazine, WIRED
+- CookingChannel
+- Corus
+- Coub
+- CozyTV
+- cp24
+- cpac
+- Cracked
+- Craftsy
+- croatian.film
+- CrooksAndLiars
+- CrowdBunker
+- CrowdBunkerChannel
+- Crtvg
+- CSpan - C-SPAN
+- CSpanCongress
+- CtsNews - 華視新聞
+- CTVNews
+- cu.ntv.co.jp - 日テレ無料TADA!
+- CultureUnplugged
+- curiositystream
+- Cybrary
+- CybraryCourse
+- DacastPlaylist
+- DacastVOD
+- DagelijkseKost - dagelijksekost.een.be
+- DailyMail
+- dailymotion
+- DailyWire
+- DailyWirePodcast
+- damtomo
+- dangalplay
+- daum.net
+- daystar
+- DBTV
+- DctpTv
+- democracynow
+- DestinationAmerica
+- DetikEmbed
+- DeuxM
+- DeuxMNews
+- DigitalConcertHall - DigitalConcertHall extractor
+- Digiteka
+- Digiview
+- DiscogsReleasePlaylist
+- DiscoveryLife
+- DiscoveryNetworksDe
+- DiscoveryPlus
+- DiscoveryPlusIndia
+- DiscoveryPlusIndiaShow
+- DiscoveryPlusItaly
+- DiscoveryPlusItalyShow
+- Disney
+- dlf - DLF Multi-feed Archives
+- dlive
+- Douyin
+- DouyuShow
+- DouyuTV - 斗鱼直播
+- DPlay
+- DRBonanza
+- Dropbox
+- Dropout
+- DropoutSeason
+- DrTalks
+- drtv
+- Dumpert
+- Duoplay
+- dvtv - http://video.aktualne.cz/
+- dzen.ru - Дзен (dzen) formerly Яндекс.Дзен (Yandex Zen)
+- EbaumsWorld
+- Ebay
+- egghead - egghead.io course
+- eggs
+- EinsUndEinsTV
+- EinsUndEinsTVLive
+- EinsUndEinsTVRecordings
+- ElementorEmbed
+- Elonet
+- ElPais - El País
+- ElTreceTV - El Trece TV (Argentina)
+- Embedly
+- Epicon
+- EpiconSeries
+- EpidemicSound
+- eplus - e+ (イープラス)
+- Epoch
+- ERRArhiiv
+- ERRJupiter
+- ertflix - ERTFLIX videos by codename
+- ertwebtv - ert.gr webtv embedded videos
+- ESPN
+- ESPNArticle
+- ESPNCricInfo
+- EttuTv
+- EuroParlWebstream
+- EuropeanTour
+- Eurosport
+- EUScreen
+- EWETV
+- EWETVLive
+- EWETVRecordings
+- Expressen
+- facebook
+- FacebookPluginsVideo
+- Fathom
+- Faulio
+- FaulioLive
+- faz.net
+- fc2
+- Fczenit
+- Fifa
+- FilmArchiv - FILMARCHIV ON
+- filmon
+- Filmweb
+- FiveThirtyEight
+- FiveTV
+- Flickr
+- Floatplane
+- FloatplaneChannel
+- FoodNetwork
+- FootyRoom
+- Formula1
+- FOX
+- FOX9
+- FOX9News
+- foxnews - Fox News and Fox Business Video
+- FoxNewsVideo
+- FoxSports
+- fptplay - fptplay.vn
+- FrancaisFacile
+- FranceCulture
+- franceinfo - franceinfo.fr (formerly francetvinfo.fr)
+- francetv
+- Freesound
+- freespeech.org
+- freetv
+- FreeTvMovies
+- FrontendMasters
+- FrontendMastersCourse
+- FrontendMastersLesson
+- Funk
+- Funker530
+- FuyinTV
+- Gab
+- Gaia
+- GameDevTVDashboard
+- GameJolt
+- GameJoltCommunity
+- GameJoltGame
+- GameJoltGameSoundtrack
+- GameJoltSearch
+- GameJoltUser
+- GameSpot
+- GameStar
+- Gaskrank
+- GBNews - GB News clips, features and live streams
+- GediDigital
+- gem.cbc.ca
+- Genius
+- GeniusLyrics
+- Germanupa - germanupa.de
+- GetCourseRu
+- GetCourseRuPlayer
+- Gettr
+- GettrStreaming
+- GiantBomb
+- GlattvisionTV
+- GlattvisionTVLive
+- GlattvisionTVRecordings
+- Glide - Glide mobile video messages (glide.me)
+- GlobalPlayerAudio
+- GlobalPlayerAudioEpisode
+- GlobalPlayerLive
+- GlobalPlayerLivePlaylist
+- GlobalPlayerVideo
+- Globo
+- GloboArticle
+- glomex - Glomex embedded videos
+- GMANetworkVideo
+- Go
+- GoDiscovery
+- GodResource
+- Golem
+- goodgame
+- GoogleDrive
+- GoPro
+- GoToStage
+- Graspop
+- gronkh
+- Groupon
+- Harpodeon
+- hbo
+- HearThisAt
+- Heise
+- hetklokhuis
+- hgtv.com
+- HGTVDe
+- HGTVUsa
+- HiDive
+- HistoricFilms
+- history - History.com Topic
+- HitRecord
+- HollywoodReporter
+- HollywoodReporterPlaylist
+- Holodex
+- hotstar - JioHotstar
+- hrfernsehen
+- HRTi
+- HRTiPlaylist
+- HSEProduct
+- HSEShow
+- html5
+- Huajiao - 花椒直播
+- HuffPost - Huffington Post
+- Hungama
+- HungamaAlbumPlaylist
+- HungamaSong
+- huya - 虎牙直播
+- Hypem
+- Hytale
+- Icareus
+- IdagioAlbum
+- IdagioPersonalPlaylist
+- IdagioPlaylist
+- IdagioRecording
+- IdagioTrack
+- iflix
+- IflixSeries
+- ign.com
+- IGNArticle
+- IGNVideo
+- iheartradio
+- IlPost
+- Iltalehti
+- imdb - Internet Movie Database trailers
+- imgur
+- Ina
+- Inc
+- IndavideoEmbed
+- InfoQ
+- Instagram - Instagram hashtag search URLs
+- InstagramIOS - IOS instagram:// URL
+- Internazionale
+- InvestigationDiscovery
+- IPrima
+- IPrimaCNN
+- iq.com - International version of iQiyi
+- iqiyi - 爱奇艺
+- IslamChannel
+- IslamChannelSeries
+- IsraelNationalNews
+- ITProTV
+- ITProTVCourse
+- ITV
+- ITVBTCC
+- ivi - ivi.ru compilations
+- ivideon - Ivideon TV
+- Ivoox
+- Ixigua
+- Jamendo
+- JamendoAlbum
+- jiosaavn
+- Joj
+- Jove
+- JStream
+- JTBC - jtbc.co.kr
+- JWPlatform
+- Kakao
+- Kaltura
+- Kenh14Playlist
+- Kenh14Video
+- khanacademy
+- kick
+- Kicker
+- KickStarter
+- Kika - KiKA.de
+- KikaPlaylist
+- KinoPoisk
+- Kommunetv
+- KompasVideo
+- KTH
+- Ku6
+- KukuluLive
+- la7.it
+- laracasts
+- LastFM
+- LastFMPlaylist
+- LastFMUser
+- LaXarxaMes
+- lbry - odysee.com channels
+- LCI
+- Le - 乐视网
+- LearningOnScreen
+- Lecturio
+- LecturioCourse
+- LecturioDeCourse
+- LeFigaroVideoEmbed
+- LeFigaroVideoSection
+- LEGO
+- Lemonde
+- LePlaylist
+- Libsyn
+- life - Life.ru
+- likee
+- linkedin
+- Liputan6
+- ListenNotes
+- LiTV
+- Livestreamfails
+- Lnk
+- loc - Library of Congress
+- Locipo
+- LocipoPlaylist
+- Loco
+- loom
+- LRTRadio
+- LRTStream
+- LRTVOD
+- LSMLREmbed
+- LSMLTVEmbed
+- LSMReplay
+- Lumni
+- maariv.co.il
+- MagellanTV
+- MagentaMusik
+- mailru - Видео@Mail.Ru
+- MainStreaming - MainStreaming Player
+- mangomolo
+- MangoTV - 芒果TV
+- ManyVids
+- MaoriTV
+- massengeschmack.tv
+- Masters
+- MatchiTV
+- MatchTV
+- mave
+- MBN - mbn.co.kr (매일방송)
+- MDR - MDR.DE
+- MedalTV
+- media.ccc.de
+- Mediaite
+- MediaKlikk
+- Medialaan
+- Mediaset
+- MediasetShow
+- Mediasite
+- MediasiteCatalog
+- MediasiteNamedCatalog
+- MediaStream
+- MediaWorksNZVOD
+- Medici
+- megaphone.fm - megaphone.fm embedded players
+- megatvcom - megatv.com embedded videos
+- Meipai - 美拍
+- mellowfan - mellow-fan
+- MelonVOD
+- Metacritic
+- mewatch
+- MicrosoftBuild
+- MicrosoftEmbed
+- MicrosoftLearnEpisode
+- MicrosoftLearnPlaylist
+- MicrosoftLearnSession
+- MicrosoftMedius
+- minds
+- mir24.tv
+- mirrativ
+- MirrorCoUK
+- mixch
+- mixcloud
+- Mixlr
+- MixlrRecoring
+- MLB
+- MLBArticle
+- MLBTV
+- MLBVideo
+- MLSSoccer
+- MNetTV
+- MNetTVLive
+- MNetTVRecordings
+- MochaVideo
+- Mojevideo - mojevideo.sk
+- Monstercat
+- monstersiren - 塞壬唱片
+- moviepilot - Moviepilot trailer
+- MovingImage
+- MSN
+- mtg - MTG services
+- mtv
+- MujRozhlas
+- MuseAI
+- MuseScore
+- Mux
+- Mx3
+- Mx3Neo
+- Mx3Volksmusik
+- mxplayer - Amazon MX Player
+- MySpace
+- MySpass
+- MyVideoGe
+- Mzaalo
+- n-tv.de
+- N1Info
+- N1InfoAsset
+- NascarClassics
+- Nate
+- NateProgram
+- NationalGeographicTV
+- Naver
+- NBC
+- NBCNews
+- nbcolympics
+- NBCStations
+- ndr - NDR.de - Norddeutscher Rundfunk
+- nebula
+- NekoHacker
+- Nest
+- NestClip
+- NetAppCollection
+- NetAppVideo
+- netease - 网易云音乐 - 专辑
+- NetPlusTV
+- NetPlusTVLive
+- NetPlusTVRecordings
+- Netzkino
+- Newgrounds
+- NewsPicks
+- Newsy
+- Nexx
+- NexxEmbed
+- nfb - nfb.ca and onf.ca films and episodes
+- NFHSNetwork
+- nfl.com
+- NhkForSchoolBangumi
+- NhkForSchoolProgramList
+- NhkForSchoolSubject - Portal page for each school subjects, like Japanese (kokugo, 国語) or math (sansuu/suugaku or 算数・数学)
+- NhkRadioNewsPage
+- NhkRadiru - NHK らじる (Radiru/Rajiru)
+- NhkRadiruLive
+- NhkVod
+- NhkVodProgram
+- nhl.com
+- nick.com
+- niconico - NicoNico user history or likes. Requires cookies.
+- NiconicoChannelPlus - ニコニコチャンネルプラス - チャンネル - ライブリスト. nicochannel.jp/channel/lives
+- NiconicoUser
+- nicovideo - Nico video search, newest first
+- NinaProtocol
+- Nintendo
+- Nitter
+- njoy - N-JOY
+- NobelPrize
+- NoicePodcast
+- NOSNLArticle
+- Nova - TN.cz, Prásk.tv, Nova.cz, Novaplus.cz, FANDA.tv, Krásná.cz and Doma.cz
+- NovaEmbed
+- NovaPlay
+- NowCanal
+- nowness
+- npo - npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl
+- npo.nl
+- Npr
+- NRK
+- NRKPlaylist
+- NRKRadioPodkast
+- NRKSkole - NRK Skole
+- NRKTV - NRK TV and NRK Radio
+- NRKTVDirekte - NRK TV Direkte and NRK Radio Direkte
+- NRKTVEpisode
+- NRKTVEpisodes
+- NRKTVSeason
+- NRKTVSeries
+- nts.live
+- ntv.ru
+- NYTimes
+- NYTimesArticle
+- NYTimesCookingGuide
+- NYTimesCookingRecipe
+- nzherald
+- NZOnScreen
+- NZZ
+- ocw.mit.edu
+- Odnoklassniki
+- OfTV
+- OfTVPlaylist
+- OlympicsReplay
+- Omnyfm
+- OmnyfmPlaylist
+- OmnyfmShow
+- on24
+- OnDemandChinaEpisode
+- OnDemandKorea
+- OnDemandKoreaProgram
+- OneFootball
+- OnePlacePodcast
+- onet.pl
+- onet.tv
+- OnetMVP
+- onsen - インターネットラジオステーション＜音泉＞
+- Opencast
+- OpencastPlaylist
+- orf - fm4.orf.at stories
+- OsnatelTV
+- OsnatelTVLive
+- OsnatelTVRecordings
+- OutsideTV
+- OwnCloud
+- PacktPub
+- PacktPubCourse
+- PalcoMP3
+- PandaTv - pandalive.co.kr (팬더티비)
+- Panopto
+- PanoptoList
+- PanoptoPlaylist
+- ParamountPressExpress
+- Parler - Posts on parler.com
+- parliamentlive.tv - UK parliament videos
+- Parlview
+- parti
+- patreon
+- pbs - Public Broadcasting Service (PBS) and member stations: PBS: Public Broadcasting Service, APT - Alabama Public Television (WBIQ), GPB/Georgia Public Broadcasting (WGTV), Mississippi Public Broadcasting (WMPN), Nashville Public Television (WNPT), WFSU-TV (WFSU), WSRE (WSRE), WTCI (WTCI), WPBA/Channel 30 (WPBA), Alaska Public Media (KAKM), Arizona PBS (KAET), KNME-TV/Channel 5 (KNME), Vegas PBS (KLVX), AETN/ARKANSAS ETV NETWORK (KETS), KET (WKLE), WKNO/Channel 10 (WKNO), LPB/LOUISIANA PUBLIC BROADCASTING (WLPB), OETA (KETA), Ozarks Public Television (KOZK), WSIU Public Broadcasting (WSIU), KEET TV (KEET), KIXE/Channel 9 (KIXE), KPBS San Diego (KPBS), KQED (KQED), KVIE Public Television (KVIE), PBS SoCal/KOCE (KOCE), ValleyPBS (KVPT), CONNECTICUT PUBLIC TELEVISION (WEDH), KNPB Channel 5 (KNPB), SOPTV (KSYS), Rocky Mountain PBS (KRMA), KENW-TV3 (KENW), KUED Channel 7 (KUED), Wyoming PBS (KCWC), Colorado Public Television / KBDI 12 (KBDI), KBYU-TV (KBYU), Thirteen/WNET New York (WNET), WGBH/Channel 2 (WGBH), WGBY (WGBY), NJTV Public Media NJ (WNJT), WLIW21 (WLIW), mpt/Maryland Public Television (WMPB), WETA Television and Radio (WETA), WHYY (WHYY), PBS 39 (WLVT), WVPT - Your Source for PBS and More! (WVPT), Howard University Television (WHUT), WEDU PBS (WEDU), WGCU Public Media (WGCU), WPBT2 (WPBT), WUCF TV (WUCF), WUFT/Channel 5 (WUFT), WXEL/Channel 42 (WXEL), WLRN/Channel 17 (WLRN), WUSF Public Broadcasting (WUSF), ETV (WRLK), UNC-TV (WUNC), PBS Hawaii - Oceanic Cable Channel 10 (KHET), Idaho Public Television (KAID), KSPS (KSPS), OPB (KOPB), KWSU/Channel 10 & KTNW/Channel 31 (KWSU), WILL-TV (WILL), Network Knowledge - WSEC/Springfield (WSEC), WTTW11 (WTTW), Iowa Public Television/IPTV (KDIN), Nine Network (KETC), PBS39 Fort Wayne (WFWA), WFYI Indianapolis (WFYI), Milwaukee Public Television (WMVS), WNIN (WNIN), WNIT Public Television (WNIT), WPT (WPNE), WVUT/Channel 22 (WVUT), WEIU/Channel 51 (WEIU), WQPT-TV (WQPT), WYCC PBS Chicago (WYCC), WIPB-TV (WIPB), WTIU (WTIU), CET  (WCET), ThinkTVNetwork (WPTD), WBGU-TV (WBGU), WGVU TV (WGVU), NET1 (KUON), Pioneer Public Television (KWCM), SDPB Television (KUSD), TPT (KTCA), KSMQ (KSMQ), KPTS/Channel 8 (KPTS), KTWU/Channel 11 (KTWU), East Tennessee PBS (WSJK), WCTE-TV (WCTE), WLJT, Channel 11 (WLJT), WOSU TV (WOSU), WOUB/WOUC (WOUB), WVPB (WVPB), WKYU-PBS (WKYU), KERA 13 (KERA), MPBN (WCBB), Mountain Lake PBS (WCFE), NHPTV (WENH), Vermont PBS (WETK), witf (WITF), WQED Multimedia (WQED), WMHT Educational Telecommunications (WMHT), Q-TV (WDCQ), WTVS Detroit Public TV (WTVS), CMU Public Television (WCMU), WKAR-TV (WKAR), WNMU-TV Public TV 13 (WNMU), WDSE - WRPT (WDSE), WGTE TV (WGTE), Lakeland Public Television (KAWE), KMOS-TV - Channels 6.1, 6.2 and 6.3 (KMOS), MontanaPBS (KUSM), KRWG/Channel 22 (KRWG), KACV (KACV), KCOS/Channel 13 (KCOS), WCNY/Channel 24 (WCNY), WNED (WNED), WPBS (WPBS), WSKG Public TV (WSKG), WXXI (WXXI), WPSU (WPSU), WVIA Public Media Studios (WVIA), WTVI (WTVI), Western Reserve PBS (WNEO), WVIZ/PBS ideastream (WVIZ), KCTS 9 (KCTS), Basin PBS (KPBT), KUHT / Channel 8 (KUHT), KLRN (KLRN), KLRU (KLRU), WTJX Channel 12 (WTJX), WCVE PBS (WCVE), KBTC Public Television (KBTC)
+- PBSKids
+- PearVideo
+- peer.tv
+- PeerTube
+- peloton - Peloton Live
+- PerformGroup
+- periscope
+- PGATour
+- PhilharmonieDeParis - Philharmonie de Paris
+- phoenix.de
+- Photobucket
+- PiaLive
+- Piapro
+- picarto
+- Piksel
+- Pinkbike
+- Pinterest
+- PinterestCollection
+- Platzi
+- PlatziCourse
+- play.tv - PLAY (formerly goplay.be)
+- player.sky.it
+- PlayerFm
+- PlaySuisse
+- pluralsight
+- PlyrEmbed
+- PodbayFM
+- PodbayFMChannel
+- Podchaser
+- PokerGo
+- PokerGoCollection
+- PolsatGo
+- polskieradio
+- Popcorntimes
+- PopcornTV
+- Pr0gramm
+- PrankCast
+- PrankCastPost
+- PremiershipRugby
+- PressTV
+- PRXAccount
+- PRXSeries - PRX Series Search
+- prxstories - PRX Stories Search
+- PRXStory
+- puhutv
+- Pyvideo
+- QDance
+- QingTing
+- qqmusic - QQ音乐 - 专辑
+- QuantumTV
+- QuantumTVLive
+- QuantumTVRecordings
+- Radiko
+- RadikoRadio
+- Radio1Be
+- radiocanada
+- radiofrance
+- RadioFranceLive
+- RadioFrancePodcast
+- RadioFranceProfile
+- RadioFranceProgramSchedule
+- radiokapital
+- RadioRadicale
+- RadioZetPodcast
+- radlive
+- Rai
+- RaiCultura
+- RaiNews
+- RaiPlay
+- RaiPlayLive
+- RaiPlayPlaylist
+- RaiPlaySound
+- RaiPlaySoundLive
+- RaiPlaySoundPlaylist
+- RaiSudtirol
+- RayWenderlich
+- RayWenderlichCourse
+- RbgTum
+- RbgTumCourse
+- RbgTumNewCourse
+- RCS
+- RCSEmbeds
+- RCSVarious
+- RCTIPlus
+- RCTIPlusSeries
+- RCTIPlusTV
+- RedBull
+- RedBullEmbed
+- RedBullTV
+- RedBullTVRrnContent
+- Reddit
+- ReverbNation
+- RideHome
+- RinseFM
+- RinseFMArtistPlaylist
+- rokfin - Rokfin Channels
+- RoosterTeeth
+- RoosterTeethSeries
+- RottenTomatoes
+- RoyaLive
+- Rozhlas
+- RozhlasVltava
+- RTDocumentry
+- RTDocumentryPlaylist
+- rte - Raidió Teilifís Éireann TV
+- rtl.lu
+- rtl.nl - rtl.nl and rtlxl.nl
+- RTLLuLive
+- RTLLuRadio
+- RTNews
+- RTP
+- RTRFM
+- RTVCKaltura
+- RTVCPlay
+- RTVCPlayEmbed
+- rtve.es - RTVE a la carta and Play
+- rtvslo.si
+- RudoVideo
+- Rumble
+- RumbleChannel
+- RumbleEmbed
+- Ruptly
+- rutube - Rutube channel
+- Ruv
+- ruv.is
+- S4C
+- S4CSeries
+- safari - safaribooksonline.com online courses
+- SAKTV
+- SAKTVLive
+- SAKTVRecordings
+- SaltTV
+- SaltTVLive
+- SaltTVRecordings
+- SampleFocus
+- Sangiin - 参議院インターネット審議中継 (archive)
+- Sapo - SAPO Vídeos
+- SaucePlus - Sauce+
+- SaucePlusChannel
+- SBS - sbs.com.au
+- sbs.co.kr
+- schooltv
+- ScienceChannel
+- Screen9
+- Screencast
+- Screencastify
+- ScreencastOMatic
+- ScreenRec
+- ScrippsNetworks
+- Sen
+- senate.gov
+- Servus
+- SeznamZpravy
+- SeznamZpravyArticle
+- Shahid
+- ShahidShow
+- SharePoint
+- ShemarooMe
+- Shiey
+- showroom
+- ShugiinItvLive - 衆議院インターネット審議中継
+- ShugiinItvLiveRoom - 衆議院インターネット審議中継 (中継)
+- ShugiinItvVod - 衆議院インターネット審議中継 (ビデオライブラリ)
+- SibnetEmbed
+- simplecast
+- Sina
+- Skeb
+- sky
+- sky.it
+- SkyNewsAU
+- Slideshare
+- SlidesLive
+- smotrim
+- SnapchatSpotlight
+- SoftWhiteUnderbelly
+- Sohu
+- SohuV
+- SonyLIV
+- SonyLIVSeries
+- soop - sooplive.com catch story
+- soundcloud - Soundcloud search
+- SoundcloudEmbed
+- southpark.cc.com
+- southpark.de
+- southpark.lat
+- southparkstudios.co.uk
+- southparkstudios.com.br
+- southparkstudios.nu
+- SovietsCloset
+- SovietsClosetPlaylist
+- Spiegel
+- Sport5
+- sporteurope
+- Spreaker
+- SpreakerShow
+- SproutVideo
+- sr - Saarländischer Rundfunk
+- SRGSSR
+- SRGSSRPlay - srf.ch, rts.ch, rsi.ch, rtr.ch and swissinfo.ch play sites
+- StacommuLive
+- StacommuVOD
+- StagePlusVODConcert
+- startrek - STAR TREK
+- startv
+- Steam
+- SteamCommunity
+- SteamCommunityBroadcast
+- StoryFire
+- StoryFireSeries
+- StoryFireUser
+- Streaks
+- Streamable
+- StreamCZ
+- StreetVoice
+- stv
+- stvr - Slovak Television and Radio (formerly RTVS)
+- Subsplash
+- Substack
+- sverigesradio
+- svt - SVT Play and Öppet arkiv
+- Syfy
+- SztvHu
+- TapTapApp
+- TapTapAppIntl
+- TapTapMoment
+- TapTapPostIntl
+- tarangplus
+- TBS
+- TBSJPEpisode
+- TBSJPPlaylist
+- TBSJPProgram
+- TeachableCourse
+- Teamcoco
+- TeamTreeHouse
+- techtv.mit.edu
+- TedEmbed
+- TedPlaylist
+- TedSeries
+- TedTalk
+- Tele13
+- Tele5
+- TeleBruxelles
+- TelecaribePlay
+- Telecinco - telecinco.es, cuatro.com and mediaset.es
+- Telegraaf
+- telegram
+- TeleQuebec
+- TeleQuebecEmission
+- TeleQuebecLive
+- TeleQuebecSquat
+- TeleQuebecVideo
+- Telewebion
+- TennisTV
+- TF1
+- theatercomplextown
+- TheChosen
+- TheGuardianPodcast
+- TheGuardianPodcastPlaylist
+- TheHighWire
+- TheIntercept
+- ThePlatform
+- ThePlatformFeed
+- TheStar
+- TheSun
+- TheWeatherChannel
+- ThisAmericanLife
+- ThisOldHouse
+- ThisVidMember
+- ThreeSpeak
+- ThreeSpeakUser
+- tiktok
+- TLC
+- TMZ
+- toggle
+- toggo
+- tokfm
+- ToonGoggles
+- tou.tv
+- toutiao - 今日头条
+- TravelChannel
+- TrtCocukVideo
+- TrtWorld
+- TrueID
+- TruNews
+- Truth
+- ttinglive - 띵라이브 (formerly FlexTV)
+- TubeTuGraz - tube.tugraz.at
+- TubeTuGrazSeries
+- tubitv
+- Tumblr
+- tunein
+- tv.dfb.de
+- TV2
+- TV2Article
+- TV2DK
+- TV2DKBornholmPlay
+- tv2play.hu
+- tv2playseries.hu
+- TV4 - tv4.se and tv4play.se
+- TV5MONDE
+- tv5unis
+- tv8.it - TV8 Live
+- TVANouvelles
+- TVANouvellesArticle
+- tvaplus - TVA+
+- TVC
+- TVCArticle
+- TVer
+- tvigle - Интернет-телевидение Tvigle.ru
+- TVIPlayer
+- tvnoe - Televize Noe
+- TVO
+- tvopengr - tvopen.gr embedded videos
+- tvp - Telewizja Polska
+- TVPlayHome
+- tvw
+- Tweakers
+- TwitCasting
+- TwitCastingLive
+- TwitCastingUser
+- twitch
+- twitter
+- udemy
+- UDNEmbed - 聯合影音
+- UFCTV
+- UlizaPlayer
+- UlizaPortal - ulizaportal.jp
+- umg - Universal Music Deutschland
+- Unistra
+- UnitedNationsWebTv
+- uol.com.br
+- uplynk
+- URPlay
+- USANetwork
+- USAToday
+- ustream
+- ustudio
+- Vbox7
+- Veo
+- Vevo
+- VevoPlaylist
+- vh1.com
+- vhx
+- Videa
+- video.arnes.si - Arnes Video
+- video.google - Google Video search
+- video.sky.it
+- VideoKenPlayer
+- VideoPress
+- Vidflex
+- Vidio
+- VidioLive
+- VidioPremier
+- VidLii
+- Vidly
+- vids.io
+- Vidyard
+- viewlift
+- Viidea
+- vimeo - Vimeo user likes
+- ViMP
+- Viously
+- Visir - Vísir
+- Viu
+- ViuOTTIndonesia
+- vk
+- VKPlay
+- VKPlayLive
+- vm.tiktok
+- Vocaroo
+- VODPlatform
+- volejtv
+- VoxMedia
+- VoxMediaVolume
+- vpro - npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl
+- vqq
+- vrsquare - VR SQUARE
+- VRT - VRT NWS, Flanders News, Flandern Info and Sporza
+- vrtmax - VRT MAX (formerly VRT NU)
+- VTM
+- VTV
+- VTVGo
+- VTXTV
+- VTXTVLive
+- VTXTVRecordings
+- WalyTV
+- WalyTVLive
+- WalyTVRecordings
+- washingtonpost
+- wat.tv
+- WatchESPN
+- WDR
+- WDRElefant
+- WDRPage
+- web.archive - web.archive.org saved youtube videos, "ytarchive:" prefix
+- Webcamerapl
+- Webcaster
+- WebcasterFeed
+- WebOfStories
+- WebOfStoriesPlaylist
+- Weibo
+- WeiboUser
+- WeiboVideo
+- wetv
+- WeTvSeries
+- Weverse
+- WeverseLive
+- WeverseLiveTab
+- WeverseMedia
+- WeverseMediaTab
+- WeverseMoment
+- WeVidi
+- Whyp
+- wikimedia.org
+- Wimbledon
+- WimTV
+- WinSportsVideo
+- Wistia
+- WistiaChannel
+- WistiaPlaylist
+- wnl - npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl
+- wordpress
+- WorldStarHipHop
+- wppilot
+- wrestleuniverse
+- WSJ - Wall Street Journal
+- WSJArticle
+- WWE
+- wyborcza
+- WyborczaPodcast
+- wykop
+- XboxClips
+- XiaoHongShu - 小红书
+- ximalaya - 喜马拉雅FM 专辑
+- Xinpianchang - 新片场
+- yahoo - Yahoo! Japan News
+- YandexDisk
+- yandexmusic - Яндекс.Музыка - Альбом
+- YandexVideo
+- YandexVideoPreview
+- YappyProfile
+- yfanefa
+- YleAreena
+- youku - 优酷
+- YouNowChannel
+- YouNowLive
+- YouNowMoment
+- youtube - YouTube liked videos; ":ytfav" keyword (requires cookies)
+- YoutubeLivestreamEmbed - YouTube livestream embeds
+- YoutubeYtBe - youtu.be
+- Zaiko
+- ZaikoETicket
+- zan - Z-aN
+- Zapiks
+- Zattoo
+- ZattooLive
+- ZattooMovies
+- ZattooRecordings
+- zdf
+- ZetlandDKArticle
+- Zhihu
+- zingmp3 - zingmp3.vn
+- zoom
+- Zype
+
+## Photos, carousels and galleries (136 sites)
+
+- 2ch - 2ch.org
+- 2chan - dec.2chan.net
+- 35photo - 35photo.pro
+- 4archive - 4archive.org
+- 4chan - boards.4channel.org
+- 4chanarchives - 4chanarchives.com
+- 500px - 500px.com
+- animepictures - anime-pictures.net
+- ao3 - archiveofourown.org
+- arcalive - arca.live
+- architizer - architizer.com
+- arena - are.na
+- artfight - artfight.net
+- artstation - artstation.com
+- audiochan - audiochan.com
+- bakashots - compare.bakashots.me
+- bbc - bbc.co.uk
+- behance - behance.net
+- bellazon - bellazon.com
+- bilibili - bilibili.com
+- bluesky - bsky.app
+- boosty - boosty.to
+- booth - booth.pm
+- cara - cara.app
+- catbox - catbox.moe
+- cien - ci-en.net
+- civitai - civitai.com
+- comedywildlifephoto - comedywildlifephoto.com
+- comicartfans - comicartfans.com
+- comicvine - comicvine.gamespot.com
+- cosmos - cosmos.so
+- cyberfile - cyberfile.me
+- dcinside - gall.dcinside.com
+- deviantart - deviantart.com
+- discord - discord.com
+- facebook - facebook.com
+- fanbox - user.fanbox.cc
+- fantia - fantia.jp
+- febri - febri.jp
+- filester - filester.me
+- flickr - flickr.com
+- foriio - foriio.com
+- framedsc - framedsc.com
+- furaffinity - furaffinity.net
+- gofile - gofile.io
+- harvardlawnuremberg - nuremberg.law.harvard.edu
+- hatenablog - blog.hatenablog.com
+- imagebam - imagebam.com
+- imagechest - imgchest.com
+- imagepond - imagepond.net
+- imageshack - imageshack.com
+- imagetwist - imagetwist.com
+- imagevenue - imagevenue.com
+- imdb - imdb.com
+- imgbb - ibb.co
+- imgbox - imgbox.com
+- imgpile - imgpile.com
+- imgth - imgth.com
+- imgur - imgur.com
+- instagram - instagram.com
+- issuu - issuu.com
+- itaku - itaku.ee
+- joyreactor - joyreactor.com
+- kabeuchi - kabe-uchiroom.com
+- keenspot - comic.keenspot.com
+- koofr - app.koofr.net
+- lensdump - lensdump.com
+- lexica - lexica.art
+- lightroom - lightroom.adobe.com
+- listal - listal.com
+- livedoor - blog.livedoor.jp
+- lofter - blog.lofter.com
+- mangoxo - mangoxo.com
+- mgrenders - a.mg-renders.net
+- myfigurecollection - myfigurecollection.net
+- myportfolio - user.myportfolio.com
+- naver-blog - blog.naver.com
+- naver-chzzk - chzzk.naver.com
+- naver-webtoon - comic.naver.com
+- newgrounds - newgrounds.com
+- patreon - patreon.com
+- pexels - pexels.com
+- pholder - pholder.com
+- photovogue - vogue.com
+- picarto - picarto.tv
+- piczel - piczel.tv
+- pillowfort - pillowfort.social
+- pinterest - pinterest.com
+- pixeldrain - pixeldrain.com
+- pixhost - pixhost.cc
+- pixiv - pixiv.net
+- pixiv-novel - pixiv.net
+- pixnet - user.pixnet.net
+- plurk - plurk.com
+- poipiku - poipiku.com
+- postimg - postimg.cc
+- postype - postype.com
+- reddit - reddit.com
+- seiga - seiga.nicovideo.jp
+- shareimage - share-image.com
+- skeb - skeb.jp
+- slickpic - user.slickpic.com
+- slideshare - slideshare.net
+- smugmug
+- snapchat - snapchat.com
+- speakerdeck - speakerdeck.com
+- steamcommunity - steamcommunity.com
+- steamgriddb - steamgriddb.com
+- subscribestar - subscribestar.com
+- tapas - tapas.io
+- telegraph - telegra.ph
+- tenor - tenor.com
+- tiktok - tiktok.com
+- toyhouse - toyhou.se
+- tumblr - tumblr.com
+- tumblrgallery - tumblrgallery.xyz
+- tungsten - tungsten.run
+- turboimagehost - turboimagehost.com
+- twitter - x.com
+- unsplash - unsplash.com
+- uploadir - uploadir.com
+- vanillarock - vanilla-rock.com
+- vanlifetrader - vanlifetrader.com
+- vk - vk.com
+- vsco - vsco.co
+- wallhaven - wallhaven.cc
+- wallpapercave - wallpapercave.com
+- warosu - warosu.org
+- weasyl - weasyl.com
+- webmshare - webmshare.com
+- webtoons - webtoons.com
+- weibo - weibo.com
+- whyp - whyp.it
+- wikiart - wikiart.org
+- xfolio - xfolio.jp
+- zerochan - zerochan.net
+
+## Marked broken in yt-dlp right now (106)
+
+These have an extractor but yt-dlp itself flags them as not working at the moment.
+
+20min, 247sports, AdobeConnect, aol.com, bfi, BleacherReport, BleacherReportCMS, BR, BYUtv, CBS, cbssports, Cinemax, ClipRs, CloserToTruth, Clubic, ConanClassic, DHM, DigitallySpeaking, DTube, dw, Europa, fancode, Folketinget, Gazeta, GDCVault, GodTube, HotNewHipHop, JeuxVideo, KankaNews, Karaoketv, Katsomo, KelbyOne, KrasView, kuwo, Lcp, LcpPlay, Lecture2Go, Lenta, LiveJournal, Markiza, MarkizaPage, Motorsport, MTVUutisetArticle, MuenchenTV, MurrtubeUser, nba, NBCSports, NBCSportsStream, NBCSportsVPlayer, NDTV, Noz, NRLTV, OktoberfestTV, Playtvak, PlutoTV, podomatic, ProjectVeritas, R7, R7Article, radio.de, RadioJavan, RDS, RENTV, RENTVArticle, Restudy, Reuters, RockstarGames, RTBF, rtl2, RTS, Ruutu, Saitosan, sejm, SenalColombiaLive, SkylineWebcams, skynewsarabia, SportBox, t-online.de, Tagesschau, Tass, Teachable, teachertube, TeachingChannel, TeleMB, Telemundo, TeleTask, TFO, TheChosenGroup, ToypicsUser, TVN24, ukcolumn, Unity, Urort, Varzesh3, VGTV, vice, Viddler, Viqeo, voicy, Walla, WeiqiTV, whowatch, XMinus, YapFiles, Yappy, ZeeNews

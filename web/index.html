@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src https: data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>grabF</title>
+<link rel="preload" href="fonts/InstrumentSerif-400i.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Jost-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="bar pywebview-drag-region">
+    <span class="word pywebview-drag-region">grab<b class="pywebview-drag-region">F</b><i class="pywebview-drag-region">.</i></span>
+    <button class="lnk" id="contactBtn" title="github.com/firas-abidi">contact</button>
+    <span class="sep">&middot;</span>
+    <button class="lnk" id="donateBtn" title="ko-fi.com/firaspanda">donate</button>
+    <button class="win" id="minBtn" title="minimize">&#8211;</button>
+    <button class="win" id="bigBtn" title="make bigger"><i class="sq"></i></button>
+    <button class="win" id="closeBtn" title="close">&#215;</button>
+  </header>
+
+  <div>
+    <label class="field" id="field">
+      <input id="url" placeholder="paste a link from youtube, tiktok, instagram, pinterest, x…" spellcheck="false" autocomplete="off">
+      <span class="wait">reading&hellip;</span>
+      <button class="paste" id="pasteBtn">paste</button>
+    </label>
+    <div class="warn" id="ffwarn"><b>ffmpeg is missing.</b> Videos can't be merged and mp3s can't be made. Install it with <i>winget install Gyan.FFmpeg</i> and reopen grabF.</div>
+  </div>
+
+  <main class="main" id="main">
+    <section id="hero"></section>
+
+    <section class="opts">
+      <nav class="tabs" id="tabs">
+        <button data-mode="video">video</button>
+        <button data-mode="audio">audio</button>
+      </nav>
+
+      <div id="videoOpts">
+        <div id="qRows"></div>
+        <p class="note" id="qNote"></p>
+        <div class="line">
+          <span class="lbl">file</span>
+          <button class="choice" data-compat="0">best quality <span class="it">mp4 or mkv</span></button>
+          <span class="sep">/</span>
+          <button class="choice" data-compat="1">plays everywhere <span class="it">h.264 mp4<span id="compatCap"></span></span></button>
+        </div>
+        <div id="subsBox">
+          <div class="line">
+            <span class="lbl">subtitles</span>
+            <select class="inline-select" id="subs"><option value="">none</option></select>
+            <span id="subsModes">
+              <span class="sep">·</span>
+              <button class="choice" data-sm="embed">inside the video <span class="it">switchable</span></button>
+              <span class="sep">/</span>
+              <button class="choice" data-sm="burn" id="burnOpt">burned in</button>
+              <span class="sep">/</span>
+              <button class="choice" data-sm="file">separate file <span class="it">.srt</span></button>
+            </span>
+          </div>
+          <p class="note" id="subsNote"></p>
+          <div id="styleBox">
+            <div class="stypager">
+              <button class="styarrow" id="styPrev" title="more styles" aria-label="previous styles">&#8249;</button>
+              <div class="styles" id="styleRows"></div>
+              <button class="styarrow" id="styNext" title="more styles" aria-label="next styles">&#8250;</button>
+            </div>
+            <!-- the chosen style at its true size on this video, drawn from the same numbers ffmpeg burns with -->
+            <div class="spv" id="subPreview"><div class="spv-line"><span id="spvText">this is how the subtitles will look</span></div></div>
+            <div class="line size-line">
+              <span class="lbl">size</span>
+              <input type="range" id="subSize" min="50" max="200" step="5" value="100" aria-label="subtitle size">
+              <span class="val" id="subSizeVal">100%</span>
+              <button class="choice" id="subSizeReset">reset</button>
+              <!-- the dark edge and shadow around the words; boxed has a box instead, so it's hidden there -->
+              <span id="olBox"><span class="lbl">outline</span>
+                <button class="choice" data-ol="1">on</button><span class="sep">/</span><button class="choice" data-ol="0">off</button></span>
+            </div>
+            <p class="note" id="burnNote"></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="audioOpts">
+        <div id="aRows"></div>
+        <div class="line" id="kbpsLine"></div>
+        <p class="note" id="aNote"></p>
+      </div>
+
+      <div id="photoOpts"><div id="pRows"></div></div>
+
+      <div id="clipLine">
+        <div class="line">
+          <span class="lbl">part</span>
+          <button class="choice" data-clip="0">the whole thing</button>
+          <span class="sep">/</span>
+          <button class="choice" data-clip="1">just a part</button>
+          <span id="clipFields">
+            <span class="lbl">from</span><input class="time" id="clipFrom" placeholder="0:00" spellcheck="false">
+            <span class="lbl">to</span><input class="time" id="clipTo" spellcheck="false">
+          </span>
+        </div>
+        <p class="note" id="clipNote"></p>
+      </div>
+
+      <div class="line" id="listLine">
+        <span class="lbl">playlist</span>
+        <span id="oneOpt"><button class="choice" data-list="one">this video only</button><span class="sep">/</span></span>
+        <button class="choice" data-list="pick">choose videos</button>
+        <span class="sep">/</span>
+        <button class="choice" data-list="all">the whole playlist <span class="it" id="listCount"></span></button>
+      </div>
+      <div id="pickBox">
+        <div class="line">
+          <span class="lbl" id="pickCount"></span>
+          <button class="choice" id="pickAll">select all</button>
+          <span class="sep">/</span>
+          <button class="choice" id="pickNone">none</button>
+        </div>
+        <div id="pickRows"></div>
+      </div>
+
+      <div class="go">
+        <span class="sum" id="goNote"></span>
+        <button id="go">Download <span>&#8594;</span></button>
+      </div>
+    </section>
+
+    <section class="queue" id="queue">
+      <h2>Downloads <button id="clearBtn">clear finished</button></h2>
+      <div id="jobs"></div>
+    </section>
+
+    <section class="queue past" id="pastBox">
+      <h2>Earlier <button id="clearPastBtn" title="clears this list only - your files stay where they are">clear history</button></h2>
+      <div id="past"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>saving to</span><button id="outBtn" title="change folder"></button>
+    <span class="sep">·</span><button id="openBtn">open</button>
+    <span class="sp"></span>
+    <span>signed in with</span>
+    <select class="inline-select" id="cookies" title="only used when a post won't open without your login - then grabF borrows this browser's login for that one site">
+      <option value="">no browser</option><option>firefox</option><option>chrome</option><option>edge</option>
+      <option>brave</option><option>opera</option><option>vivaldi</option>
+    </select>
+    <span class="sep">·</span><button id="updBtn" title="update the download engines when a site stops working">update</button>
+    <span class="sep">·</span><button id="verBtn" title="grabF's version"></button>
+    <span class="by">by <b>F</b>iras Abidi</span>
+  </footer>
+</div>
+
+<!-- invisible grab zones along the edges, for resizing the borderless window -->
+<div class="rz n" data-edge="n"></div><div class="rz s" data-edge="s"></div>
+<div class="rz e" data-edge="e"></div><div class="rz w" data-edge="w"></div>
+<div class="rz ne" data-edge="ne"></div><div class="rz nw" data-edge="nw"></div>
+<div class="rz se" data-edge="se"></div><div class="rz sw" data-edge="sw"></div>
+
+<script src="ui.js"></script>
+</body>
+</html>

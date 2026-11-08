@@ -1,0 +1,240 @@
+:root{
+  --paper:#efe9dd; --paper2:#e7e0d2; --ink:#1f1c18; --ink2:#5d564b; --mute:#8a8275;
+  --rule:#d0c7b7; --dot:#a39a8b; --red:#c4472c;
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Jost","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--paper);color:var(--ink);font:400 14px/1.45 var(--sans);overflow:hidden;
+  -webkit-font-smoothing:antialiased;user-select:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+input,select{font:inherit;color:inherit}
+::selection{background:var(--red);color:var(--paper)}
+.app{display:grid;grid-template-rows:auto auto 1fr auto;height:100%}
+.it{font-family:var(--serif);font-style:italic}
+
+/* masthead */
+.bar{display:flex;align-items:center;height:46px;padding:0 10px 0 28px;color:var(--mute);font-size:13px}
+.bar .word{font:italic 22px var(--serif);color:var(--ink);margin-right:auto;line-height:1}
+.bar .word{position:relative;padding-right:8px}
+.bar .lnk{font-size:13px;color:var(--mute)}
+.bar .lnk:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.bar .sep{margin:0 8px}
+#donateBtn{margin-right:16px}
+/* wordmark: grab in ink, the F and the full stop in the brand orange. The dot is 5px (~0.43 x-height of the
+   22px italic), sits on the baseline and is kerned -2px so it tucks under the F's arm, ~2px clear of its foot. */
+.bar .word b{font-weight:400;color:#d65f30}
+.bar .word i{display:inline-block;position:relative;top:-3.7px;width:5px;height:5px;margin-left:-2px;
+  border-radius:50%;background:#d65f30;font-size:0;vertical-align:baseline}
+.win{width:30px;height:30px;display:grid;place-items:center;font-size:15px;color:var(--mute);text-align:center}
+.win:hover{color:var(--ink)}
+/* bigify: one square; when big, two overlapping squares = 'go back to normal size' */
+.win .sq{position:relative;display:block;width:9px;height:9px;border:1px solid currentColor}
+.big .win .sq{width:8px;height:8px;transform:translate(-1px,1px)}
+.big .win .sq::after{content:"";position:absolute;width:8px;height:8px;top:-4px;left:2px;
+  border-top:1px solid currentColor;border-right:1px solid currentColor}
+
+/* link line */
+.field{margin:0 28px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;align-items:center;gap:14px;height:42px}
+.field input{flex:1;min-width:0;background:none;border:0;outline:0;font-size:13.5px;color:var(--ink2);user-select:text}
+.field input:focus{color:var(--ink)}
+.field input::placeholder{color:var(--mute)}
+.field .paste{color:var(--red);font-size:13px}
+.field .paste:hover{text-decoration:underline}
+.field .wait{font:italic 15px var(--serif);color:var(--mute);display:none}
+.loading .wait{display:block}
+.loading .paste{display:none}
+
+.main{overflow-y:auto;overflow-anchor:none;padding:0 28px 24px}
+.main::-webkit-scrollbar{width:6px}.main::-webkit-scrollbar-thumb{background:var(--rule)}
+
+/* lead story */
+.lead{display:grid;grid-template-columns:190px 1fr;gap:22px;padding:24px 0 8px}
+.pic{position:relative;aspect-ratio:4/3;background:var(--paper2);overflow:hidden}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.pic img.on{opacity:1}
+.kicker{font-size:12px;color:var(--mute);letter-spacing:.01em}
+.title{font:400 31px/1.04 var(--serif);margin-top:8px;letter-spacing:-.005em;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;user-select:text;
+  padding-bottom:.16em;margin-bottom:-.16em}  /* room for the tails of g, y, p - the tight lines would clip them */
+.dek{font-size:13px;color:var(--ink2);margin-top:12px}
+.empty{padding:40px 0 10px}
+.empty h1{font:400 46px/1 var(--serif)}
+.empty h1 i{color:var(--red)}
+.empty p{margin-top:16px;font-size:14px;color:var(--ink2);max-width:390px}
+.empty .err{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule);color:var(--ink)}
+.empty .err::before{content:"✗  ";color:var(--red)}
+.empty .hint{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule);color:var(--ink2);font:italic 17px var(--serif)}
+.title.waiting{color:var(--mute)}
+.skel .pic{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45}}
+
+/* sections */
+.opts{display:none;padding-top:10px}
+.ready .opts{display:block}
+.tabs{display:flex;gap:22px;font-size:13.5px;color:var(--mute);margin:8px 0 8px}
+.tabs button{padding-bottom:2px;border-bottom:1px solid transparent}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* index rows with dotted leaders */
+.row{display:flex;align-items:baseline;gap:8px;padding:6px 0;width:100%;font-size:15px;color:var(--ink)}
+.row .tick{width:16px;flex:none;color:var(--red)}
+.row .tag{font:italic 15px var(--serif);color:var(--mute)}
+.row.on .tag{color:var(--red)}
+.row .lead-dots{flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px}
+.row .val{font-size:13.5px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.row.on{font-weight:500}
+.row.on .val{color:var(--ink)}
+.row:hover .lead-dots{border-bottom-color:var(--ink)}
+.row.more{color:var(--mute);font-size:14px}
+.row.off{color:var(--mute);font-weight:400}
+.row.off .tag{font-size:14px}
+.row.off .lead-dots{border-bottom-color:var(--rule)}
+.row.off:hover{color:var(--ink)}
+.row.off:hover .tag{color:var(--red)}
+#qNote:empty,#clipNote:empty{display:none}
+
+/* just-a-part times */
+#clipFields{display:none;align-items:baseline;gap:8px;margin-left:10px}
+#clipLine.on #clipFields{display:inline-flex}
+.time{width:64px;background:none;border:0;border-bottom:1px dotted var(--dot);outline:0;font-size:13.5px;
+  color:var(--ink);text-align:center;font-variant-numeric:tabular-nums;user-select:text}
+.time:focus{border-bottom-color:var(--ink)}
+.time.bad{border-bottom:1px solid var(--red);color:var(--red)}
+#clipNote.bad{color:var(--red)}
+
+/* subtitles: mode + burned-in styles */
+#subsModes{display:none}
+#subsNote:empty{display:none}
+#subs{max-width:330px;text-overflow:ellipsis}
+#subsBox.lang #subsModes{display:inline}
+/* capped, so a maximised window doesn't stretch the preview across the screen */
+#styleBox{display:none;padding-top:6px;max-width:720px}
+#subsBox.burn #styleBox{display:block}
+/* left/right arrows around the swatch row */
+.stypager{display:grid;grid-template-columns:20px minmax(0,1fr) 20px;gap:6px;align-items:start}
+.styarrow{height:46px;font:400 26px/1 var(--serif);color:var(--ink);text-align:center}
+.styarrow:hover{color:var(--red)}
+.styarrow:disabled{color:var(--rule);cursor:default}
+
+/* swatches: a strip four wide that scrolls sideways (trackpad swipe, arrows), snapping to whole groups */
+.styles{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 24px) / 4);gap:8px;
+  overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;
+  scrollbar-width:none;padding:3px 3px 2px;margin:-3px -3px -2px;scroll-padding-inline:3px}
+.styles::-webkit-scrollbar{display:none}
+.sty{display:block;text-align:left;min-width:0;scroll-snap-align:start}
+.sty .sw{display:flex;align-items:center;justify-content:center;height:46px;background:#6d6a62;
+  outline:1px solid var(--rule);font-size:21px;line-height:1}
+.sty.on .sw{outline:2px solid var(--red);outline-offset:1px}
+/* single-line names; the tick has a fixed slot so selecting doesn't shift the layout */
+.sty .nm{display:block;margin-top:5px;font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sty .tk{font-style:normal;color:var(--red);display:inline-block;width:12px;visibility:hidden}
+.sty.on .nm{color:var(--ink)}
+.sty.on .tk{visibility:visible}
+
+/* the live preview: the video's own picture with the subtitles at their true size */
+.spv{position:relative;margin-top:12px;aspect-ratio:16/9;background:#3b3a36 center/cover no-repeat;overflow:hidden}
+.spv-line{position:absolute;text-align:center;line-height:1.22}
+.spv-line span{-webkit-box-decoration-break:clone;box-decoration-break:clone;paint-order:stroke fill}
+
+/* size slider: a pale hairline that turns into a firm black rule up to your size, ending in a short upright.
+   --f (0..1, set from code) is how far along the size is; the thumb's centre travels 1px .. width-1px, so the fill does too. */
+.size-line{align-items:center;padding-top:10px}
+/* nudged so the rule runs through the middle of the lowercase letters beside it, not above them */
+#subSize{flex:1;max-width:260px;appearance:none;-webkit-appearance:none;background:none;height:18px;cursor:pointer;position:relative;top:5.5px;--f:.333}
+#subSize::-webkit-slider-runnable-track{height:11px;
+  background:linear-gradient(var(--ink),var(--ink)) 0 5px/calc(1px + (100% - 2px) * var(--f)) 2px no-repeat,
+             linear-gradient(var(--rule),var(--rule)) 0 5px/100% 1px no-repeat}
+#subSize::-webkit-slider-thumb{-webkit-appearance:none;width:2px;height:11px;border-radius:0;background:var(--ink);margin-top:0;border:0}
+#subSizeReset{border-bottom:0}  /* no invisible underline: same box as "size", so the words sit on one line */
+/* outline on/off: pushed to the right edge of the row */
+#olBox{display:inline-flex;align-items:baseline;gap:10px;margin-left:auto;padding-left:24px}
+#olBox .lbl{margin-right:0}
+#olBox.na{visibility:hidden}
+#subSizeVal{min-width:44px;font-variant-numeric:tabular-nums;color:var(--ink);font-size:13.5px}
+
+/* choose videos from a playlist */
+#pickBox{display:none;margin-top:4px}
+#pickBox.on{display:block}
+#pickRows{max-height:340px;overflow-y:auto;margin-top:4px;padding-right:6px}
+#pickRows::-webkit-scrollbar{width:6px}#pickRows::-webkit-scrollbar-thumb{background:var(--rule)}
+#pickRows .row{font-size:14px;padding:5px 0}
+#pickRows .row .num{width:26px;flex:none;color:var(--mute);font-variant-numeric:tabular-nums;font-size:12.5px}
+#pickRows .row:not(.on){color:var(--ink2)}
+#pickRows .row .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#pickCount{color:var(--ink2)}
+#pickCount.bad{color:var(--red)}
+
+/* earlier downloads */
+.past{margin-top:22px}
+.past .job .nm{color:var(--ink2)}
+.job.gone .nm{color:var(--mute);text-decoration:line-through;text-decoration-color:var(--rule)}
+
+/* edge resizing */
+.rz{position:fixed;z-index:50}
+.rz.n,.rz.s{left:8px;right:8px;height:5px}.rz.n{top:0;cursor:ns-resize}.rz.s{bottom:0;cursor:ns-resize}
+.rz.e,.rz.w{top:8px;bottom:8px;width:5px}.rz.e{right:0;cursor:ew-resize}.rz.w{left:0;cursor:ew-resize}
+.rz.ne,.rz.nw,.rz.se,.rz.sw{width:10px;height:10px}
+.rz.ne{top:0;right:0;cursor:nesw-resize}.rz.sw{bottom:0;left:0;cursor:nesw-resize}
+.rz.nw{top:0;left:0;cursor:nwse-resize}.rz.se{bottom:0;right:0;cursor:nwse-resize}
+.big .rz{display:none}
+
+.foot button.fresh{color:var(--red)}
+
+/* a link being dragged over the window */
+body.dropping .app{outline:2px dashed var(--red);outline-offset:-8px}
+.row.more .lead-dots{border-bottom-color:var(--rule)}
+
+.line{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;font-size:13.5px;color:var(--ink2);padding:10px 0 2px}
+.line .lbl{color:var(--mute);margin-right:4px}
+.choice{color:var(--mute);border-bottom:1px solid transparent}
+.choice:hover{color:var(--ink)}
+.choice.on{color:var(--ink);border-bottom-color:var(--red)}
+.sep{color:var(--rule)}
+.inline-select{appearance:none;background:none;border:0;border-bottom:1px dotted var(--dot);outline:0;color:var(--ink);font-size:13.5px;padding:0 2px;cursor:pointer}
+.inline-select option{background:var(--paper);color:var(--ink);font:400 13.5px var(--sans)}
+/* group headings in the language list: quiet labels, not bold black headings */
+.inline-select option.grp{color:var(--mute);font-size:12.5px}
+.note{font-size:13px;color:var(--ink2);padding-top:6px}
+
+/* the call to action */
+.go{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;padding:16px 0 4px;border-top:1px solid var(--ink)}
+.go .sum{font-size:13px;color:var(--ink2)}
+.go button{font:400 30px/1.1 var(--serif);border-bottom:1.5px solid var(--red);white-space:nowrap}
+.go button:hover{color:var(--red)}
+.go button span{display:inline-block;transition:transform .2s}
+.go button:hover span{transform:translateX(4px)}
+
+/* downloads */
+.queue{margin-top:26px;display:none}
+.queue.has{display:block}
+.queue h2{display:flex;justify-content:space-between;align-items:baseline;font:italic 20px var(--serif);
+  border-bottom:1px solid var(--ink);padding-bottom:4px}
+.queue h2 button{font:13px var(--sans);color:var(--mute)}
+.queue h2 button:hover{color:var(--ink)}
+.job{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:11px 0 10px;border-bottom:1px solid var(--rule)}
+.job .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.job .nm .it{font-size:15px;color:var(--mute);margin-left:6px}
+.job .st{grid-column:1;font-size:12.5px;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.job .st .mark{color:var(--red)}
+.job .act{grid-row:1/3;grid-column:2;display:flex;gap:14px;align-items:center;font-size:13px;color:var(--mute)}
+.job .act button:hover{color:var(--ink);text-decoration:underline}
+.job .tr{grid-column:1/3;height:1px;background:var(--rule);margin-top:6px;position:relative;overflow:hidden}
+.job .tr i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--red);transition:width .2s}
+.job .tr.busy i{width:25%;animation:slide 1.3s ease-in-out infinite}
+@keyframes slide{from{transform:translateX(-100%)}to{transform:translateX(400%)}}
+.job.done .tr,.job.fail .tr{display:none}
+
+/* colophon */
+.foot{display:flex;flex-wrap:wrap;row-gap:2px;white-space:nowrap;align-items:baseline;gap:8px;margin:0 28px;padding:10px 0 12px;border-top:2px solid var(--ink);font-size:12.5px;color:var(--mute)}
+.foot button{color:var(--ink2)}
+.foot button:hover{color:var(--ink);text-decoration:underline}
+.foot .sp{flex:1}
+/* colophon: the maker's name in the wordmark's italic serif, its F in the same orange as grabF's F */
+/* on a narrow window it drops to its own line, pushed to the right; labels never break mid-way */
+.foot .by{font:italic 14px var(--serif);color:var(--ink2);margin-left:auto;padding-left:10px}
+.foot .by b{font-weight:400;color:#d65f30}
+.foot .inline-select{font-size:12.5px;color:var(--ink2)}
+.warn{margin:12px 28px 0;padding:10px 0;border-top:1px solid var(--red);border-bottom:1px solid var(--red);font-size:13px;display:none}
+.warn.on{display:block}
+.warn b{font-weight:500;color:var(--red)}
