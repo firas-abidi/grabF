@@ -63,6 +63,7 @@ input,select{font:inherit;color:inherit}
 .empty p{margin-top:16px;font-size:14px;color:var(--ink2);max-width:390px}
 .empty .err{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule);color:var(--ink)}
 .empty .err::before{content:"✗  ";color:var(--red)}
+.empty .err .fix{display:block;margin-top:8px;color:var(--red);text-decoration:underline;text-underline-offset:3px}
 .empty .hint{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule);color:var(--ink2);font:italic 17px var(--serif)}
 .title.waiting{color:var(--mute)}
 .skel .pic{animation:pulse 1.4s ease-in-out infinite}

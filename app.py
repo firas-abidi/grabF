@@ -57,7 +57,7 @@ def open_with_system(path) -> None:
                          stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 # the GitHub repo whose releases are checked for a newer grabF ("" = no check at all)
 UPDATE_REPO = "firas-abidi/grabF"
 API_BASE = "https://api.github.com"
@@ -403,7 +403,23 @@ PYEXE = str(Path(sys.executable).with_name("python.exe")) if Path(sys.executable
 
 
 # engine messages -> what happened and what to do, first match wins
+CLOCK_MSG = ("This PC's date and time look wrong, so secure sites can't be checked. Turn on 'Set time automatically' "
+             "in Windows' date & time settings, then try again.")
+
+
+def with_fix(r: dict) -> dict:
+    """Errors the user can fix in one click get a 'fix' key; the page shows a button for it."""
+    if not r.get("ok") and r.get("error") == CLOCK_MSG:
+        r["fix"] = "clock"
+    return r
+
+
 PLAIN = [
+    # a PC clock set to the past (or far future) makes every secure site's certificate look invalid
+    (r"certificate is not yet valid|certificate has expired", CLOCK_MSG),
+    (r"certificate_verify_failed|certificate verify failed|self[- ]signed certificate",
+     "A secure connection couldn't be checked. This is usually an antivirus or a network (school, work, public Wi-Fi) "
+     "that inspects web traffic, or a wrong date and time on this PC. Try another network, or check the PC's clock."),
     (r"(ffmpeg|ffprobe)[^\n]{0,40}not (found|installed)|ffmpeg is not installed",
      "ffmpeg is missing, so this can't be merged or converted. Reinstall grabF, or install ffmpeg."),
     (r"no space left|errno 28|not enough space on the disk|winerror 112",
@@ -438,6 +454,8 @@ def clean_error(e: Exception) -> str:
             if re.search(pattern, low):
                 return plain
     msg = full.replace("ERROR: ", "").split("\n")[0]
+    # the engine's 'please report this issue on github ... yt-dlp -U' tail means nothing to a grabF user
+    msg = re.split(r";?\s*please report this issue", msg, maxsplit=1, flags=re.I)[0].rstrip(" ;.")
     if "]" in msg[:40]:
         msg = msg.split("]", 1)[-1].split(":", 1)[-1].strip() or msg
     return msg
@@ -937,7 +955,7 @@ class GalleryJob:
             pass  # 'cancelled' was already shown when you pressed it
         except Exception as e:
             if not self.cancelled:
-                push("failed", {"id": self.id, "error": clean_error(e)})
+                push("failed", with_fix({"id": self.id, "error": clean_error(e)}))
         finally:
             SLOTS.release()
             shutil.rmtree(tmp, ignore_errors=True)
@@ -1012,7 +1030,7 @@ class Job:
     def report(self, error: str) -> None:
         if not self.reported:
             self.reported = True
-            push("failed", {"id": self.id, "error": error})
+            push("failed", with_fix({"id": self.id, "error": error}))
 
     @staticmethod
     def subtitle_file(video: Path, lang: str) -> Path | None:
@@ -1553,6 +1571,16 @@ class Api:
             webbrowser.open(url)
 
     @own_page_only
+    def open_fix(self, which: str) -> None:
+        """'clock': Windows' own date & time settings page. Opened only by name, like open_link;
+        grabF never changes the clock itself - that's the user's call, in Windows."""
+        if which == "clock":
+            if WINDOWS:
+                os.startfile("ms-settings:dateandtime")
+            elif MAC:
+                subprocess.Popen(["open", "x-apple.systempreferences:com.apple.Date-Time-Settings.extension"])
+
+    @own_page_only
     def open_release(self) -> None:
         if _release_url:  # set only from a verified github.com/<this repo>/releases/ link
             import webbrowser
@@ -1583,6 +1611,9 @@ class Api:
 
     @own_page_only
     def probe(self, url: str, playlist: bool = False) -> dict:
+        return with_fix(self._probe(url, playlist))
+
+    def _probe(self, url: str, playlist: bool = False) -> dict:
         try:
             url = check_url(url)
         except ValueError as e:

@@ -146,7 +146,7 @@ async function probe(u, list = false) {
   catch (e) { r = { ok: false, error: "Something went wrong reading this link. Try again." }; }
   if (n !== probing) return;
   $("#field").classList.remove("loading");
-  if (!r.ok) { showEmpty(false, r.error); return; }
+  if (!r.ok) { showEmpty(false, r.error, "", r.fix); return; }
   info = r.info;
   if (info.kind === "playlist" && listMode === "one") listMode = "all";  // a playlist-only link
   if (info.kind === "audio") S.mode = "audio";
@@ -154,14 +154,17 @@ async function probe(u, list = false) {
   if (!list) requestAnimationFrame(() => $("#main").scrollTop = 0);
 }
 
-function showEmpty(loading, error, note) {
+// errors the user can fix in one click: the button opens the right Windows settings page (nothing else)
+const FIXES = { clock: "open date & time settings" };
+const fixBtn = fix => FIXES[fix] ? ` <button class="fix" data-fix="${esc(fix)}">${FIXES[fix]}</button>` : "";
+function showEmpty(loading, error, note, fix) {
   info = null;
   $("#app").classList.remove("ready");
   $("#hero").innerHTML = loading
     ? `<div class="lead skel"><div class="pic"></div><div><div class="kicker">&nbsp;</div><div class="title it waiting">Reading the link&hellip;</div></div></div>`
     : `<div class="empty"><h1>Paste a link<i>.</i></h1>
        <p>Videos, songs and photo posts from YouTube, TikTok, Instagram, Pinterest, X, SoundCloud and about a thousand other sites. Paste one above and grabF reads it straight away.</p>
-       ${error ? `<div class="err">${esc(error)}</div>` : ""}${note ? `<div class="hint">${esc(note)}</div>` : ""}</div>`;
+       ${error ? `<div class="err">${esc(error)}${fixBtn(fix)}</div>` : ""}${note ? `<div class="hint">${esc(note)}</div>` : ""}</div>`;
 }
 
 // --- rendering ---
@@ -429,7 +432,8 @@ window.onEvent = (type, d) => {
   } else if (type === "failed") {
     el.classList.add("fail");
     st.innerHTML = `<span class="mark">&#10007;</span>  ${esc(d.error)}`;
-    el.querySelector(".act").innerHTML = `<button data-retry="${esc(d.id)}">retry</button>`;
+    el.querySelector(".act").innerHTML = (FIXES[d.fix] ? `<button data-fix="${esc(d.fix)}">fix the clock</button>` : "")
+      + `<button data-retry="${esc(d.id)}">retry</button>`;
   }
 };
 
@@ -584,6 +588,7 @@ $("#jobs").onclick = e => {
   if (b.dataset.cancel) { api("cancel", b.dataset.cancel); b.textContent = "stopping"; }
   if (b.dataset.open) api("open_file", b.dataset.open);
   if (b.dataset.reveal) api("reveal", b.dataset.reveal);
+  if (b.dataset.fix) api("open_fix", b.dataset.fix);
   if (b.dataset.retry) { const old = jobs[b.dataset.retry]; document.getElementById(b.dataset.retry).remove(); startDownload(old); }
 };
 
@@ -611,6 +616,7 @@ $("#past").onclick = async e => {
   if (b.dataset.reveal) api("reveal", b.dataset.reveal);
   if (b.dataset.forget) { await api("forget", b.dataset.forget); loadPast(); }
 };
+$("#hero").addEventListener("click", e => { const b = e.target.closest("[data-fix]"); if (b) api("open_fix", b.dataset.fix); });
 $("#clearPastBtn").onclick = async () => { await api("clear_history"); loadPast(); };
 $("#outBtn").onclick = async () => { const p = await api("pick_folder"); if (p) { S.out = p; showOut(); } };
 $("#openBtn").onclick = () => api("open_folder");
