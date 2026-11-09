@@ -1,4 +1,4 @@
-# group: offline
+# group: network
 """Downloads land in videos / audio / photos inside the 'saving to' folder."""
 import shutil, sys, tempfile, threading, time, types
 from pathlib import Path

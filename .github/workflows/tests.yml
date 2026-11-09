@@ -1,0 +1,28 @@
+# Runs grabF's offline tests on a fresh Windows machine on every push and pull request.
+# The tests that download real videos or open the window are left to local runs (python tests/run_tests.py --all).
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the engines and the window library
+        run: python -m pip install "yt-dlp[default,curl-cffi]" gallery-dl pywebview
+
+      - name: Run the offline tests
+        run: python tests/run_tests.py
