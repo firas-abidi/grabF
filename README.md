@@ -1,6 +1,15 @@
-# grabF.
+<p align="center">
+  <img src="docs/banner.png" alt="grabF. paste a link, pick a quality, download the full video or just a part, with an option for burned-in subtitles.">
+</p>
 
-i made grabF because as an editor i needed one environment that downloads from any media fast and with no ads.
+<p align="center">
+  <a href="https://github.com/firas-abidi/grabF/releases/latest"><img src="https://img.shields.io/github/v/release/firas-abidi/grabF?color=d65f30" alt="release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/firas-abidi/grabF?color=1f1c18" alt="license"></a>
+  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-1f72a8" alt="platform">
+  <a href="https://github.com/firas-abidi/grabF/releases"><img src="https://img.shields.io/github/downloads/firas-abidi/grabF/total?color=5d564b" alt="downloads"></a>
+  <a href="tests"><img src="https://img.shields.io/badge/tests-174%20passing-2e7d32" alt="tests"></a>
+</p>
+i made grabF because as an editor i needed one environment that downloads from any media fast, with subtitles and with no ads.
 it works with youtube, tiktok, instagram, pinterest, x, soundcloud and around a thousand other sites.
 
 ![grabF](docs/screenshot.png)
