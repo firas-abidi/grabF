@@ -9,11 +9,14 @@
   <a href="https://github.com/firas-abidi/grabF/releases"><img src="https://img.shields.io/github/downloads/firas-abidi/grabF/total?color=5d564b" alt="downloads"></a>
   <a href="tests"><img src="https://img.shields.io/badge/tests-174%20passing-2e7d32" alt="tests"></a>
 </p>
-i made grabF because as an editor i needed one environment that downloads from any media fast, with subtitles and with no ads,
-it works with youtube, tiktok, instagram, pinterest, x, soundcloud and around a thousand other sites.
+
+I made grabF because as an editor I needed one environment that downloads from any media fast, with subtitles and with no ads.
+It works with youtube, tiktok, instagram, pinterest, x, soundcloud and around a thousand other sites.
+
 <br>
 <br>
 <br>
+
 ![grabF](docs/screenshot.png)
 
 ## the part that i'm most excited about
