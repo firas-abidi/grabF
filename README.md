@@ -34,7 +34,7 @@ most links work without logging in. instagram photo posts don't, instagram just 
 
 ## privacy
 
-grabF doesn't collect anything. no tracking, no analytics, no account. it only talks to the site you're downloading from, to github to check for a new version, and to python's package site to update its download engines once a week. it only reads your clipboard when you press paste.
+grabF doesn't collect anything. no tracking, no analytics, no account. it only talks to the site you're downloading from (including the servers that site uses for its thumbnails and video files, like i.ytimg.com for youtube), to github to check for a new version, and to python's package site to update its download engines once a week. it only reads your clipboard when you press paste.
 
 ## what it won't download
 
@@ -58,6 +58,16 @@ python app.py
 ```
 
 it's made for windows. mac and linux will be tested and info about installing grabF on them will be available soon.
+
+## tests
+
+there are 170+ automated checks in the `tests` folder. the quick ones need no internet:
+
+```
+python tests/run_tests.py
+```
+
+add `--network` for the ones that download real public videos and burn real subtitles, or `--all` to also run the ones that open the window.
 
 ## thanks everyone
 
